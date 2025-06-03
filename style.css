@@ -1,0 +1,150 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+} */
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+:root {
+    /* Light Theme (default) */
+    --primary-color: #2563eb;
+    --secondary-color: #64748b;
+    --success-color: #16a34a;
+    --danger-color: #dc2626;
+    --warning-color: #f59e0b;
+    --info-color: #0891b2;
+    --light-color: #f8fafc;
+    --dark-color: #0f172a;
+    --font-family: 'Roboto', system-ui, sans-serif;
+    --spacing-unit: 1rem;
+    --border-radius: 0.5rem;
+    --text-color: #1e293b;
+    --background-color: #ffffff;
+    --h1-size: 2.5rem;
+    --h2-size: 2rem;
+    --h3-size: 1.75rem;
+    --h4-size: 1.5rem;
+    --h5-size: 1.25rem;
+    --h6-size: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+    --primary-color: #3b82f6;
+    --secondary-color: #94a3b8;
+    --success-color: #22c55e;
+    --danger-color: #ef4444;
+    --warning-color: #f59e0b;
+    --info-color: #06b6d4;
+    --light-color: #0f172a;
+    --dark-color: #f8fafc;
+    --text-color: #e2e8f0;
+    --background-color: #020617;
+    }
+}
+
+body{
+    font-family: var(--font-family);
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+/* Navigation Styles */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--dark-color);
+    padding: 1rem 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Section Styles */
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* HERO/HOME Section */
+#home{
+    background-color: var(--background-color);
+    align-items: center;
+    justify-content: center;
+}
+
+#home img{
+    border-radius: 9999px;
+}
+
+#home h1{
+    font-size: var(--h1-size);
+}
